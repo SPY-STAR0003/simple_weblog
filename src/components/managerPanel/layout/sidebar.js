@@ -29,25 +29,25 @@ export default function Sidebar({collapsed , selectedKey}) {
                         key: '1',
                         icon: <HomeOutlined />,
                         label: <Link href={"/adminPanel"}> صفحه اصلی </Link>,
-                        className : "text-right",
+                        className : "textRight",
                     },
                     {
                         key: '2',
                         icon: <TeamOutlined />,
                         label: <Link href={"/adminPanel/users"}> لیست کاربران </Link>,
-                        className : "text-right",
+                        className : "textRight",
                     },
                     {
                         key: '3',
                         icon: <BookOutlined />,
                         label: <Link href={"/adminPanel/articles"}> لیست مقالات </Link>,
-                        className : "text-right",
+                        className : "textRight",
                     },
                     {
                         key: '4',
                         icon: <SettingOutlined />,
                         label: <Link href={"/adminPanel/profile"}> اطلاعات فردی </Link>,
-                        className : "text-right",
+                        className : "textRight",
                     },
                 ]}
             />
