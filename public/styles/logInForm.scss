@@ -1,0 +1,19 @@
+.logInForm {
+  form {
+    padding: 1rem 3rem;
+    width: 500px;
+    text-align: center;
+    background-color: rgba(250, 250, 250, .4);
+    border-radius: 0.6rem;
+    button {
+      width: 40%;
+    }
+    input {
+      padding: .4rem !important;
+      font-size: .9rem;
+    }
+    .ant-form-item-explain-error {
+      margin: .5rem 0;
+    }
+  }
+}

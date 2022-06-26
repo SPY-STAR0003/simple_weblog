@@ -1,0 +1,24 @@
+.centerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.toast {
+  position : fixed;
+  bottom : -4rem;
+  right : -1rem;
+  width : 500px;
+  height: 150px;
+}
+
+.text-right {
+  direction: rtl;
+  text-align: right;
+}
