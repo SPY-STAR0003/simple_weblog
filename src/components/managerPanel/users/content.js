@@ -1,7 +1,7 @@
 // hooks & libraries
 import React from 'react';
 
-// antd layout
+// antd components
 import { Layout } from 'antd';
 const { Content } = Layout;
 

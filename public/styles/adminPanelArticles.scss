@@ -1,0 +1,40 @@
+
+.adminPanelArticles {
+  .articleCards {
+    display: flex;
+    flex-wrap: wrap;
+    .ant-card {
+      margin: .5rem .3rem !important;
+      .ant-card-body {
+        .ant-card-meta {
+          .ant-card-meta-avatar {
+            padding-top: .5rem !important;
+            padding-right: unset !important;
+            padding-left: 1rem !important;
+          }
+        }
+      }
+      .ant-card-actions {
+        li {
+          display: flex;
+          justify-content: center;
+          border: none;
+          span {
+            margin: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-select-single {
+  width: 100% !important;
+}
+
+.ant-select-selection-item {
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 0 8px !important;
+  margin-right: .5rem;
+}

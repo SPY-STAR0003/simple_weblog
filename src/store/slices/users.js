@@ -9,7 +9,7 @@ export const Users = createSlice({
         getUsers : (state , { payload } ) => {
             return state = payload.data
         },
-        addUser : ( state , { payload } ) => {
+        addUser : state => {
             return [
                 ...state,
                 payload

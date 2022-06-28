@@ -1,118 +1,15 @@
-import { Button, Form, Input, Modal, Radio } from 'antd';
+// hooks & libraries
 import React , { useState } from 'react';
-import { PlusOutlined, UserOutlined, NumberOutlined, HomeFilled } from "@ant-design/icons";
-import { useDispatch } from "react-redux";
-import { addUser } from "./../../../store/slices/users"
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../../store/slices/users"
 
-const CollectionCreateForm = ({ visible, addUserHandler, onCancel }) => {
-    const [form] = Form.useForm();
-    return (
-        <Modal
-            visible={visible}
-            title="فرم اضافه کردن عضو جدید"
-            okText="تایید"
-            cancelText="لغو"
-            onCancel={onCancel}
-            onOk={() => {
-                form
-                    .validateFields()
-                    .then((values) => {
-                        form.resetFields();
-                        addUserHandler(values);
-                    })
-                    .catch((info) => {
-                        console.log('Validate Failed:', info);
-                    });
-            }}
-        >
-            <Form
-                form={form}
-                layout="vertical"
-                name="form_in_modal"
-                initialValues={{
-                    modifier: 'public',
-                }}
-            >
-                <Form.Item
-                    name="name"
-                    label="نام و نام خانوادگی :"
-                    rules={[
-                        {
-                            required: true,
-                            whitespace: true,
-                            message: 'لطفا نام کاربر را کامل وارد کنید',
-                        },
-                    ]}
-                >
-                    <Input
-                        size={"large"}
-                        type={"name"}
-                        prefix={<UserOutlined className="site-form-item-icon" />}
-                        allowClear
-                        placeholder={"لطفا نام خود را وارد کنید"}
-                    />
-                </Form.Item>
-                <Form.Item
-                    name="age"
-                    label="سن :"
-                    rules={[
-                        {
-                            required: true,
-                            whitespace: true,
-                            message: 'لطفا سن کاربر را به عدد وارد کنید',
-                        },
-                    ]}
-                >
-                    <Input
-                        size={"large"}
-                        type="number"
-                        prefix={<NumberOutlined className="site-form-item-icon" />}
-                        placeholder={"لطفا سن خود را وارد کنید"}
-
-                    />
-                </Form.Item>
-                <Form.Item
-                    name="city"
-                    label="استان محل سکونت :"
-                    rules={[
-                        {
-                            required: true,
-                            whitespace: true,
-                            message: 'لطفا محل زندگی کاربر را وارد کنید',
-                        },
-                    ]}
-                >
-                    <Input
-                        size={"large"}
-                        type="name"
-                        prefix={<HomeFilled  className="site-form-item-icon" />}
-                        allowClear
-                        placeholder={"لطفا شهر محل زندگی خود را وارد کنید"}
-                    />
-                </Form.Item>
-                <Form.Item
-                    name="role"
-                    label={"سطح دسترسی کاربر را انتخاب کنید :"}
-                    className="collection-create-form_last-form-item"
-                >
-                    <Radio.Group>
-                        <Radio value="admin">ادمین</Radio>
-                        <Radio value="simpleMember">عضو ساده</Radio>
-                    </Radio.Group>
-                </Form.Item>
-                <Form.Item name="description" label="توضیحات :">
-                    <Input
-                        type="textarea"
-                        placeholder={"چنانچه توضیحاتی اضافی درباره کاربر دارید در این قسمت وارد کنید."}
-                    />
-                </Form.Item>
-            </Form>
-        </Modal>
-    );
-};
+// antd components
+import { Button, Form, Input, Modal, Radio } from 'antd';
+import { PlusOutlined, UserOutlined, NumberOutlined, HomeFilled } from "@ant-design/icons";
 
 export default function AddUsersForm() {
+    const [form] = Form.useForm();
     const [visible, setVisible] = useState(false);
     const dispatch = useDispatch()
 
@@ -134,11 +31,107 @@ export default function AddUsersForm() {
                     setVisible(true)
                 }}
             />
-            <CollectionCreateForm
+            <Modal
                 visible={visible}
-                addUserHandler={addUserHandler}
-                onCancel={() => setVisible(false) }
-            />
+                title="فرم اضافه کردن عضو جدید"
+                okText="تایید"
+                cancelText="لغو"
+                onCancel={() => setVisible(false)}
+                onOk={() => {
+                    form
+                        .validateFields()
+                        .then((values) => {
+                            form.resetFields();
+                            addUserHandler(values);
+                        })
+                        .catch((info) => {
+                            console.log('Validate Failed:', info);
+                        });
+                }}
+            >
+                <Form
+                    form={form}
+                    layout="vertical"
+                    name="form_in_modal"
+                    initialValues={{
+                        modifier: 'public',
+                    }}
+                >
+                    <Form.Item
+                        name="name"
+                        label="نام و نام خانوادگی :"
+                        rules={[
+                            {
+                                required: true,
+                                whitespace: true,
+                                message: 'لطفا نام کاربر را کامل وارد کنید',
+                            },
+                        ]}
+                    >
+                        <Input
+                            size={"large"}
+                            type={"name"}
+                            prefix={<UserOutlined className="site-form-item-icon" />}
+                            allowClear
+                            placeholder={"لطفا نام خود را وارد کنید"}
+                        />
+                    </Form.Item>
+                    <Form.Item
+                        name="age"
+                        label="سن :"
+                        rules={[
+                            {
+                                required: true,
+                                whitespace: true,
+                                message: 'لطفا سن کاربر را به عدد وارد کنید',
+                            },
+                        ]}
+                    >
+                        <Input
+                            size={"large"}
+                            type="number"
+                            prefix={<NumberOutlined className="site-form-item-icon" />}
+                            placeholder={"لطفا سن خود را وارد کنید"}
+
+                        />
+                    </Form.Item>
+                    <Form.Item
+                        name="city"
+                        label="استان محل سکونت :"
+                        rules={[
+                            {
+                                required: true,
+                                whitespace: true,
+                                message: 'لطفا محل زندگی کاربر را وارد کنید',
+                            },
+                        ]}
+                    >
+                        <Input
+                            size={"large"}
+                            type="name"
+                            prefix={<HomeFilled  className="site-form-item-icon" />}
+                            allowClear
+                            placeholder={"لطفا شهر محل زندگی خود را وارد کنید"}
+                        />
+                    </Form.Item>
+                    <Form.Item
+                        name="role"
+                        label={"سطح دسترسی کاربر را انتخاب کنید :"}
+                        className="collection-create-form_last-form-item"
+                    >
+                        <Radio.Group>
+                            <Radio value="admin">ادمین</Radio>
+                            <Radio value="simpleMember">عضو ساده</Radio>
+                        </Radio.Group>
+                    </Form.Item>
+                    <Form.Item name="description" label="توضیحات :">
+                        <Input
+                            type="textarea"
+                            placeholder={"چنانچه توضیحاتی اضافی درباره کاربر دارید در این قسمت وارد کنید."}
+                        />
+                    </Form.Item>
+                </Form>
+            </Modal>
         </div>
     );
 }

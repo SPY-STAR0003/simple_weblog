@@ -1,11 +1,12 @@
-import {Space, Table} from "antd";
+// hooks & libraries
 import React, {useState} from "react";
 import {useSelector} from "react-redux";
+
+// antd components
+import { Space, Table } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
-
 export default function UsersTable() {
-
 
     const defaultExpandable = {
         expandedRowRender: (record) => <p>{record.description}</p>,

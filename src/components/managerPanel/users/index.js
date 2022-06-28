@@ -1,7 +1,7 @@
 // hooks & libraries
 import React , {useState} from 'react';
 
-// antd layout
+// antd components
 import { Layout } from 'antd';
 
 // components
