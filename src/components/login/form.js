@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useDispatch } from 'react-redux'
-import { setUserForm } from "../../store/slices/userForm";
 
 // antd layout
 import { LockOutlined, UserOutlined } from '@ant-design/icons';

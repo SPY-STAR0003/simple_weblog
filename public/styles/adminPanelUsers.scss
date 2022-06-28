@@ -1,0 +1,133 @@
+.showUsersAdminPanelTable {
+  .ant-table-cell {
+    p {
+      direction: rtl;
+      text-align: right;
+    }
+  }
+  .ant-table-column-sorters {
+    position: relative;
+    .ant-table-column-title {
+      margin-right: 0 !important;
+    }
+    .ant-table-column-sorter {
+      margin-left: 0 !important;
+      margin-right: .25rem !important;
+      .ant-table-column-sorter-inner {
+        margin-right: 0 !important;
+      }
+    }
+  }
+  .ant-checkbox {
+    margin: 0 auto !important;
+  }
+  .ant-table-cell .ant-table-row-expand-icon-cell {
+    vertical-align: center;
+  }
+}
+
+.ant-dropdown {
+  ul {
+    text-align: right !important;
+    li {
+      .ant-dropdown-menu-title-content {
+        label {
+          span {
+            margin-right: 0;
+          }
+        }
+        span {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.addBtnForm {
+  position: fixed !important;
+  left: 2rem !important;
+  bottom: 2rem !important;
+  transition: all .4s;
+  .anticon-plus {
+    margin: 0 auto !important;
+    transition: all .4s;
+    svg {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.addBtnForm:hover {
+  transform: scale(1.7);
+  .anticon-plus {
+    transition: all .4s;
+    transform: rotate(90deg);
+  }
+}
+
+.adminPanelUsersTable {
+
+}
+
+.collection-create-form_last-form-item {
+  margin-bottom: 0;
+}
+
+input::placeholder {
+  font-size: .8rem !important;
+}
+
+.ant-modal-content {
+  .ant-modal-close {
+    right: 0 !important;
+  }
+  .ant-modal-header {
+    .ant-modal-title {
+      margin-right: 2rem;
+    }
+  }
+  .ant-modal-body {
+    .ant-form-item {
+      .ant-form-item-label {
+        text-align: right;
+        .ant-form-item-required:before {
+          margin-left: .25rem;
+        }
+      }
+      .ant-form-item-control {
+        .ant-input-prefix {
+          font-size: .9rem;
+          margin-left: .5rem;
+        }
+      }
+      .ant-form-item-explain-error {
+        font-size: .8rem;
+        margin: .5rem;
+      }
+    }
+  }
+  .ant-modal-footer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-top: none;
+    button {
+      padding: 4px 24px !important;
+      border-radius: 4px;
+    }
+  }
+}
+
+.ant-pagination {
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+  li {
+    span {
+      margin: 0 auto !important;
+    }
+  }
+}
