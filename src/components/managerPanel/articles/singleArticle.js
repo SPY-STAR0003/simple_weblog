@@ -9,7 +9,7 @@ import {useState} from "react";
 
 export default function SingleArticle({article}) {
     const [loading, setLoading] = useState(false);
-    let { subject , sort , content } = article
+    let { id , subject , sort , hashtags , content } = article
 
     if (sort === undefined) sort = "متفرقه";
     content = `${content.substring(0 , 50)}...`
@@ -33,7 +33,10 @@ export default function SingleArticle({article}) {
             ]}
         >
             <div className={"opacityDiv"}>
-                <Link href={"/"}>
+                <Link
+                    href={"articles/[article]"}
+                    as={`articles/${article.id}`}
+                >
                     <Button
                         type="primary"
                         loading={loading}

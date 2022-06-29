@@ -50,3 +50,34 @@
 .articleCard:hover .opacityDiv {
   display: flex;
 }
+
+.articleUserPanelSidebar {
+  background-color: transparent !important;
+  border-radius: 10px !important;
+  .mr-3 {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    h2 {
+      width: 50% !important;
+      padding-right: .5rem;
+    }
+  }
+  ul {
+    li {
+      div {
+        position: relative;
+        .ant-menu-title-content {
+          text-align: right;
+        }
+      }
+      ul {
+        li {
+          span {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

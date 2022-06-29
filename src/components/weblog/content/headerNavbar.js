@@ -5,7 +5,7 @@ import Link from "next/link";
 const { Header } = Layout
 
 
-export default function HeaderNavbar() {
+export default function HeaderNavbar({selectedNav}) {
     const items1 = [
         { key : 1 , label : <Link href={"/"}> خانه </Link>},
         { key : 2 , label : <Link href={"/articles"}> مقالات </Link>},
@@ -26,7 +26,7 @@ export default function HeaderNavbar() {
             <Menu
                 theme="dark"
                 mode="horizontal"
-                defaultSelectedKeys={['1']}
+                defaultSelectedKeys={[selectedNav]}
                 items={items1}
                 inlineIndent={10}
             />

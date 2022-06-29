@@ -6,7 +6,7 @@ const { Content, Footer } = Layout;
 export default function UserHome() {
     return (
         <Layout className={"height100vh"}>
-            <HeaderNavbar />
+            <HeaderNavbar selectedNav={"1"} />
             <Content className="padding-50x">
                 <Layout className="site-layout-background padding-24y">
                     <Content

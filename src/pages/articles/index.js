@@ -1,39 +1,11 @@
-import { Layout } from 'antd';
-import React from 'react';
-import HeaderNavbar from "../../components/weblog/content/headerNavbar";
-const { Content, Footer } = Layout;
-import SingleArticle from "../../components/managerPanel/articles/singleArticle";
-import SidebarNav from "../../components/weblog/content/sidebarNav";
-import Link from "next/link";
+import UserPanelArticles from "../../components/weblog/articles";
 
 
 export default function Articles({articles}) {
+    articles = articles.data
+
     return (
-        <Layout>
-            <HeaderNavbar />
-            <Content className="padding-50x">
-                <Layout className="site-layout-background padding-24y">
-                    <SidebarNav />
-                    <Content
-                        style={{
-                            padding: '0 24px',
-                            minHeight: 280,
-                        }}
-                    >
-                        <div className={"showUsersArticles"}>
-                            <div className={"articleCards userPanelArticles"}>
-                                {
-                                    articles.data.map(article => <SingleArticle key={article.id} article={article} />)
-                                }
-                            </div>
-                        </div>
-                    </Content>
-                </Layout>
-            </Content>
-            <Footer className={"textCenter"}>
-                طراحی شده به وسیله محمد زورمند با استفاده از Antd.Design
-            </Footer>
-        </Layout>
+        <UserPanelArticles articles={articles} />
     )
 }
 
