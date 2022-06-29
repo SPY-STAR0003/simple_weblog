@@ -12,7 +12,7 @@ export default function Error404() {
 
         <>
             <Head>
-                <title> وبلاگ آسان بیاموز </title>
+                <title> صفحه پیدا نشد ... </title>
             </Head>
             <Layout>
                 <HeaderNavbar selectedNav={"-"} />

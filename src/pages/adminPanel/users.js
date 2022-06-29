@@ -1,6 +1,8 @@
 import Users from "../../components/managerPanel/users";
 import { useDispatch } from "react-redux";
 import { getUsers } from "../../store/slices/users";
+import Head from "next/head";
+import Profile from "../../components/managerPanel/profile";
 
 export default function AdminPanel({usersData}) {
 
@@ -8,7 +10,12 @@ export default function AdminPanel({usersData}) {
     dispatch(getUsers(usersData))
 
     return (
-        <Users />
+        <>
+            <Head>
+                <title> لیست کاربران </title>
+            </Head>
+            <Users />
+        </>
     );
 };
 

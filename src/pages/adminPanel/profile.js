@@ -1,9 +1,16 @@
 import Profile from "../../components/managerPanel/profile";
+import Head from "next/head";
+import ManagerPanel from "../../components/managerPanel/home";
 
 
 export default function AdminPanel() {
     return (
-        <Profile />
+        <>
+            <Head>
+                <title> پروفایل کاربر </title>
+            </Head>
+            <Profile />
+        </>
     );
 };
 

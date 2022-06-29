@@ -1,11 +1,18 @@
 import UserPanelArticles from "../../components/weblog/articles";
+import Head from "next/head";
+import React from "react";
 
 
 export default function Articles({articles}) {
     articles = articles.data
 
     return (
-        <UserPanelArticles articles={articles} />
+        <>
+            <Head>
+                <title> مقالات </title>
+            </Head>
+            <UserPanelArticles articles={articles} />
+        </>
     )
 }
 

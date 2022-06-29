@@ -8,7 +8,7 @@ export default function About() {
     return (
         <>
             <Head>
-                <title> وبلاگ آسان بیاموز </title>
+                <title> درباره ما </title>
             </Head>
             <Layout>
                 <HeaderNavbar selectedNav={"3"} />

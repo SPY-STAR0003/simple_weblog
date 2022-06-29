@@ -1,6 +1,7 @@
 import Articles from "../../components/managerPanel/articles";
 import {useDispatch} from "react-redux";
 import {getArticles} from "../../store/slices/articles";
+import Head from "next/head";
 
 export default function AdminPanel({data}) {
 
@@ -8,7 +9,12 @@ export default function AdminPanel({data}) {
     dispatch(getArticles(data.data))
 
     return (
-        <Articles />
+        <>
+            <Head>
+                <title> مقالات </title>
+            </Head>
+            <Articles />
+        </>
     );
 };
 
