@@ -6,3 +6,10 @@ export default function AdminPanel() {
         <Profile />
     );
 };
+
+export async function getStaticProps() {
+
+    return {
+        props : {}
+    }
+}

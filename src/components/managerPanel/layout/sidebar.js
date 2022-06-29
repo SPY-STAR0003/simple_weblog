@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
-// antd layout
+// antd content
 import {BookOutlined, HomeOutlined, SettingOutlined, TeamOutlined} from "@ant-design/icons";
 import { Menu , Layout } from "antd";
 const { Sider } = Layout

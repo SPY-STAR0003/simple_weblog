@@ -1,9 +1,14 @@
 // antd components
 import { EditOutlined, EllipsisOutlined, DeleteOutlined } from '@ant-design/icons';
-import { Avatar, Card } from 'antd';
+import { Avatar, Card, Button } from 'antd';
 const { Meta } = Card;
+import Link from "next/link";
+
+
+import {useState} from "react";
 
 export default function SingleArticle({article}) {
+    const [loading, setLoading] = useState(false);
     let { subject , sort , content } = article
 
     if (sort === undefined) sort = "متفرقه";
@@ -11,6 +16,7 @@ export default function SingleArticle({article}) {
 
     return (
         <Card
+            className={"articleCard"}
             style={{
                 width: 300,
             }}
@@ -26,6 +32,18 @@ export default function SingleArticle({article}) {
                 <EllipsisOutlined key="ellipsis" />,
             ]}
         >
+            <div className={"opacityDiv"}>
+                <Link href={"/"}>
+                    <Button
+                        type="primary"
+                        loading={loading}
+                        onClick={() => setLoading(true)}
+                        className={"radius-3"}
+                    >
+                        مشاهده مقاله
+                    </Button>
+                </Link>
+            </div>
             <Meta
                 avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
                 title={subject}

@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 import React , {useState} from 'react';
 const { Content } = Layout;
 
-// antd layout
+// antd content
 import Sidebar from "../layout/sidebar";
 import PageHeader from "../layout/header";
 
@@ -13,7 +13,7 @@ export default function Profile() {
     const [collapsed, setCollapsed] = useState(false);
     console.log("profile")
     return (
-        <Layout className={"managerPanel"}>
+        <Layout className={"managerPanel height100vh"}>
             <Sidebar collapsed={collapsed} selectedKey={"4"} />
             <Layout className="site-layout">
                 <PageHeader collapsed={collapsed} setCollapsed={setCollapsed}/>
@@ -25,7 +25,7 @@ export default function Profile() {
                         minHeight: 280,
                     }}
                 >
-                    Content
+                    <p className={"fs-5 bold-7"}> این قسمت به زودی آپدیت خواهد شد ... </p>
                 </Content>
             </Layout>
         </Layout>

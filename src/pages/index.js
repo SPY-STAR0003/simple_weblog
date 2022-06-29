@@ -1,14 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import FormLogin from "../components/login/form";
+import HomeWeblog from "../components/weblog/home";
 
 export default function Home() {
   return (
-    <div>
+    <>
         <Head>
-            <title> پروژه وبلاگ کمپ راکت </title>
+            <title> وبلاگ آسان بیاموز </title>
         </Head>
-        <FormLogin />
-    </div>
+        <HomeWeblog />
+    </>
   )
 }

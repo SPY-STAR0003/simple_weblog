@@ -1,0 +1,21 @@
+
+.userPanelHeader {
+  display: flex;
+  align-items: center;
+  .logo {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+    }
+  }
+  ul {
+    margin-right: 1rem;
+    width: 100% !important;
+    li {
+      .ant-menu-title-content {
+        margin: 0 !important;
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ export default function ManagerPanel() {
     const [collapsed, setCollapsed] = useState(false);
 
     return (
-        <Layout className={"managerPanel"}>
+        <Layout className={"managerPanel height100vh"}>
             <Sidebar collapsed={collapsed} selectedKey={"1"} />
             <Layout className="site-layout">
                 <PageHeader collapsed={collapsed} setCollapsed={setCollapsed}/>

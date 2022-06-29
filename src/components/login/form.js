@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useDispatch } from 'react-redux'
 
-// antd layout
+// antd content
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import Link from "next/link";
