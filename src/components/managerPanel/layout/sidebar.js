@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 // antd content
-import {BookOutlined, HomeOutlined, SettingOutlined, TeamOutlined} from "@ant-design/icons";
+import {BookOutlined, HomeOutlined, SettingOutlined, TeamOutlined, RedditOutlined} from "@ant-design/icons";
 import { Menu , Layout } from "antd";
 const { Sider } = Layout
 
@@ -47,6 +47,12 @@ export default function Sidebar({collapsed , selectedKey}) {
                         key: '4',
                         icon: <SettingOutlined />,
                         label: <Link href={"/adminPanel/profile"}> اطلاعات فردی </Link>,
+                        className : "textRight",
+                    },
+                    {
+                        key: '5',
+                        icon: <RedditOutlined />,
+                        label: <Link href={"/"}> بخش پنل کاربری</Link>,
                         className : "textRight",
                     },
                 ]}

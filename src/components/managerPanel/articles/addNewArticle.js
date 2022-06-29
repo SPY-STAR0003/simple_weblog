@@ -88,7 +88,6 @@ export default function AddNewArticle() {
                         <Input
                             size={"large"}
                             type={"name"}
-                            prefix={<UserOutlined className="site-form-item-icon" />}
                             allowClear
                             placeholder={"عنوان مقاله خود را در اینجا وارد کنید"}
                             onChange={e => inputHandler("subject" , e.target.value)}
@@ -113,7 +112,6 @@ export default function AddNewArticle() {
                         <Input
                             size={"large"}
                             type="number"
-                            prefix={<HomeFilled  className="site-form-item-icon" />}
                             allowClear
                             placeholder={"زمان تقریبی برای خواندن این مقاله را اینجا وارد کنید"}
                             onChange={e => inputHandler("time" , e.target.value)}

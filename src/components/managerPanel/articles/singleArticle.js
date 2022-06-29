@@ -32,24 +32,17 @@ export default function SingleArticle({article}) {
                 <EllipsisOutlined key="ellipsis" />,
             ]}
         >
-            <div className={"opacityDiv"}>
-                <Link
-                    href={"articles/[article]"}
-                    as={`articles/${article.id}`}
-                >
-                    <Button
-                        type="primary"
-                        loading={loading}
-                        onClick={() => setLoading(true)}
-                        className={"radius-3"}
-                    >
-                        مشاهده مقاله
-                    </Button>
-                </Link>
-            </div>
             <Meta
                 avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title={subject}
+                title=
+                    {
+                        <Link
+                            href={"articles/[article]"}
+                            as={`articles/${article.id}`}
+                        >
+                            {subject}
+                        </Link>
+                    }
                 description={content}
             />
         </Card>
